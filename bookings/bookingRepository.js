@@ -1,16 +1,16 @@
 const bookings = []
 
-function findAllBookings() {
+function findAll() {
     return bookings
 }
 
-function createBooking(booking) {
+function create(booking) {
     bookings.push(booking)
 }
 
 export function BookingRepository() {
     return {
-        findAllBookings,
-        createBooking
+        findAll,
+        create
     }
 }

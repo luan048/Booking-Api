@@ -34,7 +34,9 @@ export class AuthService {
         return { token, user }
     }
 
-    cerifyToken(token) {
+    verifyToken(token) {
         const decodedToken = jwt.verify(token, process.env.SEGREDO)
+        const user = this.repository.findByEmail(decodedToken.email)
+        return user
     }
 }
