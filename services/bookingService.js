@@ -1,4 +1,4 @@
-import { Booking } from "./booking.js"
+import { Booking } from "../models/booking.js"
 
 export class BookingService {
   
